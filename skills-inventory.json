@@ -1,0 +1,129 @@
+{
+  "lastUpdated": "2026-03-03T09:57:00+08:00",
+  "totalSkills": 65,
+  "categories": [
+    {
+      "name": "设计与前端",
+      "skills": [
+        "frontend-design",
+        "web-design-analyzer", 
+        "web-to-app",
+        "ai-drawio",
+        "ppt-generator",
+        "pptx-generator",
+        "ppt-roadshow-generator",
+        "nanobanana-ppt-visualizer"
+      ],
+      "count": 8
+    },
+    {
+      "name": "内容创作与出版",
+      "skills": [
+        "content-creation-publisher",
+        "content-research-writer",
+        "ecommerce-copywriter",
+        "product-marketing-copywriter",
+        "viral-video-copywriting",
+        "qiaomu-x-article-publisher",
+        "wechat-hotspot-publisher",
+        "wechatsync-publisher",
+        "xiaohongshu-makeup"
+      ],
+      "count": 9
+    },
+    {
+      "name": "视频与多媒体",
+      "skills": [
+        "infinitetalk",
+        "infinitetalk-shopping-avatar",
+        "video-creation-suite",
+        "video-creation-pro",
+        "video-creation-collaborator",
+        "video-frame-extractor",
+        "video-recreation",
+        "video-transcript-downloader",
+        "digital-avatar-shopping-video",
+        "product-video-creator",
+        "ecommerce-video-marketing",
+        "historical-science-video-prod",
+        "remotion-video-enhancer",
+        "dream-video-prompt-generator"
+      ],
+      "count": 14
+    },
+    {
+      "name": "AI与智能系统",
+      "skills": [
+        "intelligent-content-system",
+        "agent-team",
+        "multi-agent-meeting",
+        "legal-assistant-skills-main",
+        "paper-analysis-assistant",
+        "stock-analysis",
+        "data-storytelling",
+        "anything-to-notebooklm",
+        "qwen3-asr-assistant",
+        "qwen3-tts-local",
+        "tts-voice-synthesis"
+      ],
+      "count": 11
+    },
+    {
+      "name": "工具与实用技能",
+      "skills": [
+        "brave-search",
+        "chrome-automation",
+        "media-processor",
+        "pdf-processing-pro",
+        "tailored-resume-generator",
+        "product-manager-toolkit",
+        "pet-commerce-creator",
+        "poetry-music-visual",
+        "pop-up-book-illustration",
+        "historical-interview-scripts",
+        "bedtime-story",
+        "NanoBanana-PPT-Skills",
+        "jiamu-skills",
+        "agentkit-multimedia-shopping",
+        "obsidian-skills-integrated",
+        "moltbook"
+      ],
+      "count": 16
+    },
+    {
+      "name": "QQ机器人技能",
+      "skills": [
+        "qqbot-cron",
+        "qqbot-media"
+      ],
+      "count": 2
+    }
+  ],
+  "skillDetails": {
+    "frontend-design": {
+      "level": "高级",
+      "experience": "2年",
+      "description": "前端设计与开发，响应式布局，用户体验优化"
+    },
+    "content-creation-publisher": {
+      "level": "高级", 
+      "experience": "2年",
+      "description": "内容创作与多平台发布，微信公众号、X/Twitter等"
+    },
+    "intelligent-content-system": {
+      "level": "高级",
+      "experience": "1年", 
+      "description": "智能内容创作系统，自动化内容生产与发布"
+    },
+    "infinitetalk": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "音频驱动的视频生成，唇形同步技术"
+    },
+    "brave-search": {
+      "level": "中级",
+      "experience": "2年",
+      "description": "网络搜索与内容提取，信息检索能力"
+    }
+  }
+}
