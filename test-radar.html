@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雷达图测试</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            color: #e2e2e2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            text-align: center;
+        }
+        
+        canvas {
+            max-width: 100%;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎯 技能雷达图测试</h1>
+        <canvas id="radar-test" width="400" height="400"></canvas>
+        <p>测试Chart.js雷达图功能</p>
+    </div>
+
+    <script>
+        // 测试数据
+        const data = {
+            labels: ['设计与前端', '内容创作', '视频制作', '人工智能', '工具开发', '即时通讯'],
+            datasets: [{
+                label: '技能分布',
+                data: [80, 60, 90, 70, 85, 40],
+                backgroundColor: 'rgba(0, 255, 255, 0.2)',
+                borderColor: 'rgba(0, 255, 255, 1)',
+                borderWidth: 2,
+                pointBackgroundColor: 'rgba(255, 0, 255, 1)',
+                pointBorderColor: '#fff'
+            }]
+        };
+
+        const config = {
+            type: 'radar',
+            data: data,
+            options: {
+                scales: {
+                    r: {
+                        angleLines: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        grid: {
+                            color: 'rgba(255, 255, 255, 0.1)'
+                        },
+                        pointLabels: {
+                            color: '#e2e2e2'
+                        },
+                        ticks: {
+                            backdropColor: 'transparent',
+                            color: '#888'
+                        }
+                    }
+                }
+            }
+        };
+
+        // 创建图表
+        const ctx = document.getElementById('radar-test');
+        new Chart(ctx, config);
+    </script>
+</body>
+</html>

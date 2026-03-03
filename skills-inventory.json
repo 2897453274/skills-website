@@ -1,129 +1,569 @@
 {
-  "lastUpdated": "2026-03-03T09:57:00+08:00",
-  "totalSkills": 65,
+  "lastUpdated": "2026-03-03T03:17:39.934Z",
+  "totalSkills": 59,
   "categories": [
     {
-      "name": "设计与前端",
+      "name": "工具开发",
       "skills": [
-        "frontend-design",
-        "web-design-analyzer", 
-        "web-to-app",
-        "ai-drawio",
-        "ppt-generator",
-        "pptx-generator",
-        "ppt-roadshow-generator",
-        "nanobanana-ppt-visualizer"
+        "agent-team",
+        "agentkit-multimedia-shopping",
+        "anything-to-notebooklm",
+        "bedtime-story",
+        "brave-search",
+        "chrome-automation",
+        "data-storytelling",
+        "ecommerce-copywriter",
+        "historical-interview-scripts",
+        "infinitetalk",
+        "infinitetalk-shopping-avatar",
+        "jiamu-skills",
+        "media-processor",
+        "moltbook",
+        "multi-agent-meeting",
+        "obsidian-skills-integrated",
+        "paper-analysis-assistant",
+        "pdf-processing-pro",
+        "pet-commerce-creator",
+        "poetry-music-visual",
+        "pop-up-book-illustration",
+        "product-manager-toolkit",
+        "product-marketing-copywriter",
+        "qwen3-asr-assistant",
+        "qwen3-tts-local",
+        "stock-analysis",
+        "tts-voice-synthesis",
+        "xiaohongshu-makeup"
       ],
-      "count": 8
+      "count": 28
     },
     {
-      "name": "内容创作与出版",
+      "name": "人工智能",
+      "skills": [
+        "ai-drawio",
+        "legal-assistant-skills-main",
+        "tailored-resume-generator"
+      ],
+      "count": 3
+    },
+    {
+      "name": "内容创作",
       "skills": [
         "content-creation-publisher",
         "content-research-writer",
-        "ecommerce-copywriter",
-        "product-marketing-copywriter",
-        "viral-video-copywriting",
+        "intelligent-content-system",
         "qiaomu-x-article-publisher",
         "wechat-hotspot-publisher",
-        "wechatsync-publisher",
-        "xiaohongshu-makeup"
+        "wechatsync-publisher"
       ],
-      "count": 9
+      "count": 6
     },
     {
-      "name": "视频与多媒体",
+      "name": "视频制作",
       "skills": [
-        "infinitetalk",
-        "infinitetalk-shopping-avatar",
-        "video-creation-suite",
-        "video-creation-pro",
+        "digital-avatar-shopping-video",
+        "dream-video-prompt-generator",
+        "ecommerce-video-marketing",
+        "historical-science-video-prod",
+        "product-video-creator",
+        "remotion-video-enhancer",
+        "three-body-video-creator",
         "video-creation-collaborator",
+        "video-creation-pro",
+        "video-creation-suite",
         "video-frame-extractor",
         "video-recreation",
         "video-transcript-downloader",
-        "digital-avatar-shopping-video",
-        "product-video-creator",
-        "ecommerce-video-marketing",
-        "historical-science-video-prod",
-        "remotion-video-enhancer",
-        "dream-video-prompt-generator"
+        "viral-video-copywriting"
       ],
       "count": 14
     },
     {
-      "name": "AI与智能系统",
+      "name": "设计与前端",
       "skills": [
-        "intelligent-content-system",
-        "agent-team",
-        "multi-agent-meeting",
-        "legal-assistant-skills-main",
-        "paper-analysis-assistant",
-        "stock-analysis",
-        "data-storytelling",
-        "anything-to-notebooklm",
-        "qwen3-asr-assistant",
-        "qwen3-tts-local",
-        "tts-voice-synthesis"
-      ],
-      "count": 11
-    },
-    {
-      "name": "工具与实用技能",
-      "skills": [
-        "brave-search",
-        "chrome-automation",
-        "media-processor",
-        "pdf-processing-pro",
-        "tailored-resume-generator",
-        "product-manager-toolkit",
-        "pet-commerce-creator",
-        "poetry-music-visual",
-        "pop-up-book-illustration",
-        "historical-interview-scripts",
-        "bedtime-story",
+        "frontend-design",
         "NanoBanana-PPT-Skills",
-        "jiamu-skills",
-        "agentkit-multimedia-shopping",
-        "obsidian-skills-integrated",
-        "moltbook"
+        "nanobanana-ppt-visualizer",
+        "ppt-generator",
+        "ppt-roadshow-generator",
+        "pptx-generator",
+        "web-design-analyzer",
+        "web-to-app"
       ],
-      "count": 16
-    },
-    {
-      "name": "QQ机器人技能",
-      "skills": [
-        "qqbot-cron",
-        "qqbot-media"
-      ],
-      "count": 2
+      "count": 8
     }
   ],
   "skillDetails": {
-    "frontend-design": {
-      "level": "高级",
-      "experience": "2年",
-      "description": "前端设计与开发，响应式布局，用户体验优化"
+    "agent-team": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "agent-team 技能",
+      "tags": [
+        "agent-team"
+      ]
+    },
+    "agentkit-multimedia-shopping": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "agentkit-multimedia-shopping 技能",
+      "tags": [
+        "agentkit-multimedia-shopping"
+      ]
+    },
+    "ai-drawio": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "ai-drawio 技能",
+      "tags": [
+        "ai-drawio"
+      ]
+    },
+    "anything-to-notebooklm": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "anything-to-notebooklm 技能",
+      "tags": [
+        "anything-to-notebooklm"
+      ]
+    },
+    "bedtime-story": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "bedtime-story 技能",
+      "tags": [
+        "bedtime-story"
+      ]
+    },
+    "brave-search": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "---",
+      "tags": [
+        "brave-search"
+      ]
+    },
+    "chrome-automation": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "chrome-automation 技能",
+      "tags": [
+        "chrome-automation"
+      ]
     },
     "content-creation-publisher": {
-      "level": "高级", 
-      "experience": "2年",
-      "description": "内容创作与多平台发布，微信公众号、X/Twitter等"
+      "level": "中级",
+      "experience": "1年",
+      "description": "---",
+      "tags": [
+        "content-creation-publisher"
+      ]
     },
-    "intelligent-content-system": {
-      "level": "高级",
-      "experience": "1年", 
-      "description": "智能内容创作系统，自动化内容生产与发布"
+    "content-research-writer": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "---",
+      "tags": [
+        "content-research-writer"
+      ]
+    },
+    "data-storytelling": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "data-storytelling 技能",
+      "tags": [
+        "data-storytelling"
+      ]
+    },
+    "digital-avatar-shopping-video": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "digital-avatar-shopping-video 技能",
+      "tags": [
+        "digital-avatar-shopping-video"
+      ]
+    },
+    "dream-video-prompt-generator": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "dream-video-prompt-generator 技能",
+      "tags": [
+        "dream-video-prompt-generator"
+      ]
+    },
+    "ecommerce-copywriter": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "ecommerce-copywriter 技能",
+      "tags": [
+        "ecommerce-copywriter"
+      ]
+    },
+    "ecommerce-video-marketing": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "ecommerce-video-marketing 技能",
+      "tags": [
+        "ecommerce-video-marketing"
+      ]
+    },
+    "frontend-design": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "frontend-design 技能",
+      "tags": [
+        "frontend-design"
+      ]
+    },
+    "historical-interview-scripts": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "historical-interview-scripts 技能",
+      "tags": [
+        "historical-interview-scripts"
+      ]
+    },
+    "historical-science-video-prod": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "historical-science-video-prod 技能",
+      "tags": [
+        "historical-science-video-prod"
+      ]
     },
     "infinitetalk": {
       "level": "中级",
       "experience": "1年",
-      "description": "音频驱动的视频生成，唇形同步技术"
+      "description": "---",
+      "tags": [
+        "infinitetalk"
+      ]
     },
-    "brave-search": {
+    "infinitetalk-shopping-avatar": {
       "level": "中级",
-      "experience": "2年",
-      "description": "网络搜索与内容提取，信息检索能力"
+      "experience": "1年",
+      "description": "infinitetalk-shopping-avatar 技能",
+      "tags": [
+        "infinitetalk-shopping-avatar"
+      ]
+    },
+    "intelligent-content-system": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "---",
+      "tags": [
+        "intelligent-content-system"
+      ]
+    },
+    "jiamu-skills": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "jiamu-skills 技能",
+      "tags": [
+        "jiamu-skills"
+      ]
+    },
+    "legal-assistant-skills-main": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "legal-assistant-skills-main 技能",
+      "tags": [
+        "legal-assistant-skills-main"
+      ]
+    },
+    "media-processor": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "media-processor 技能",
+      "tags": [
+        "media-processor"
+      ]
+    },
+    "moltbook": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "---",
+      "tags": [
+        "moltbook"
+      ]
+    },
+    "multi-agent-meeting": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "multi-agent-meeting 技能",
+      "tags": [
+        "multi-agent-meeting"
+      ]
+    },
+    "NanoBanana-PPT-Skills": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "NanoBanana-PPT-Skills 技能",
+      "tags": [
+        "NanoBanana-PPT-Skills"
+      ]
+    },
+    "nanobanana-ppt-visualizer": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "nanobanana-ppt-visualizer 技能",
+      "tags": [
+        "nanobanana-ppt-visualizer"
+      ]
+    },
+    "obsidian-skills-integrated": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "由 Obsidian CEO Steph Ango (kepano) 亲自开源的官方技能集，为 AI Agent 提供专业的 Obsidian 操作能力。",
+      "tags": [
+        "obsidian-skills-integrated"
+      ]
+    },
+    "paper-analysis-assistant": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "paper-analysis-assistant 技能",
+      "tags": [
+        "paper-analysis-assistant"
+      ]
+    },
+    "pdf-processing-pro": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "pdf-processing-pro 技能",
+      "tags": [
+        "pdf-processing-pro"
+      ]
+    },
+    "pet-commerce-creator": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "pet-commerce-creator 技能",
+      "tags": [
+        "pet-commerce-creator"
+      ]
+    },
+    "poetry-music-visual": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "poetry-music-visual 技能",
+      "tags": [
+        "poetry-music-visual"
+      ]
+    },
+    "pop-up-book-illustration": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "pop-up-book-illustration 技能",
+      "tags": [
+        "pop-up-book-illustration"
+      ]
+    },
+    "ppt-generator": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "ppt-generator 技能",
+      "tags": [
+        "ppt-generator"
+      ]
+    },
+    "ppt-roadshow-generator": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "ppt-roadshow-generator 技能",
+      "tags": [
+        "ppt-roadshow-generator"
+      ]
+    },
+    "pptx-generator": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "pptx-generator 技能",
+      "tags": [
+        "pptx-generator"
+      ]
+    },
+    "product-manager-toolkit": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "product-manager-toolkit 技能",
+      "tags": [
+        "product-manager-toolkit"
+      ]
+    },
+    "product-marketing-copywriter": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "product-marketing-copywriter 技能",
+      "tags": [
+        "product-marketing-copywriter"
+      ]
+    },
+    "product-video-creator": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "product-video-creator 技能",
+      "tags": [
+        "product-video-creator"
+      ]
+    },
+    "qiaomu-x-article-publisher": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "---",
+      "tags": [
+        "qiaomu-x-article-publisher"
+      ]
+    },
+    "qwen3-asr-assistant": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "qwen3-asr-assistant 技能",
+      "tags": [
+        "qwen3-asr-assistant"
+      ]
+    },
+    "qwen3-tts-local": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "qwen3-tts-local 技能",
+      "tags": [
+        "qwen3-tts-local"
+      ]
+    },
+    "remotion-video-enhancer": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "remotion-video-enhancer 技能",
+      "tags": [
+        "remotion-video-enhancer"
+      ]
+    },
+    "stock-analysis": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "stock-analysis 技能",
+      "tags": [
+        "stock-analysis"
+      ]
+    },
+    "tailored-resume-generator": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "tailored-resume-generator 技能",
+      "tags": [
+        "tailored-resume-generator"
+      ]
+    },
+    "three-body-video-creator": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "three-body-video-creator 技能",
+      "tags": [
+        "three-body-video-creator"
+      ]
+    },
+    "tts-voice-synthesis": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "---",
+      "tags": [
+        "tts-voice-synthesis"
+      ]
+    },
+    "video-creation-collaborator": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "video-creation-collaborator 技能",
+      "tags": [
+        "video-creation-collaborator"
+      ]
+    },
+    "video-creation-pro": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "video-creation-pro 技能",
+      "tags": [
+        "video-creation-pro"
+      ]
+    },
+    "video-creation-suite": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "video-creation-suite 技能",
+      "tags": [
+        "video-creation-suite"
+      ]
+    },
+    "video-frame-extractor": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "video-frame-extractor 技能",
+      "tags": [
+        "video-frame-extractor"
+      ]
+    },
+    "video-recreation": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "video-recreation 技能",
+      "tags": [
+        "video-recreation"
+      ]
+    },
+    "video-transcript-downloader": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "video-transcript-downloader 技能",
+      "tags": [
+        "video-transcript-downloader"
+      ]
+    },
+    "viral-video-copywriting": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "viral-video-copywriting 技能",
+      "tags": [
+        "viral-video-copywriting"
+      ]
+    },
+    "web-design-analyzer": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "web-design-analyzer 技能",
+      "tags": [
+        "web-design-analyzer"
+      ]
+    },
+    "web-to-app": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "web-to-app 技能",
+      "tags": [
+        "web-to-app"
+      ]
+    },
+    "wechat-hotspot-publisher": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "wechat-hotspot-publisher 技能",
+      "tags": [
+        "wechat-hotspot-publisher"
+      ]
+    },
+    "wechatsync-publisher": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "wechatsync-publisher 技能",
+      "tags": [
+        "wechatsync-publisher"
+      ]
+    },
+    "xiaohongshu-makeup": {
+      "level": "中级",
+      "experience": "1年",
+      "description": "xiaohongshu-makeup 技能",
+      "tags": [
+        "xiaohongshu-makeup"
+      ]
     }
   }
 }
