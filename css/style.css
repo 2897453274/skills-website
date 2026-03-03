@@ -1,0 +1,142 @@
+/* 科技感主题样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+    color: #e2e2e2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    background: linear-gradient(45deg, #00ffff, #ff00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: #888;
+    font-size: 1.2rem;
+}
+
+section {
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+section h2 {
+    color: #00ffff;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 255, 255, 0.2);
+    border-color: #00ffff;
+}
+
+.skill-card h3 {
+    color: #ff00ff;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.achievement-card {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    margin-bottom: 1rem;
+}
+
+.achievement-card h3 {
+    color: #00ff88;
+    margin-bottom: 0.5rem;
+}
+
+.projects {
+    margin-top: 1rem;
+}
+
+.project-tag {
+    display: inline-block;
+    background: rgba(0, 255, 136, 0.2);
+    color: #00ff88;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    margin-right: 0.5rem;
+    font-size: 0.9rem;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+#radar-container,
+#timeline-container {
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    section {
+        padding: 1rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
