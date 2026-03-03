@@ -29,26 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // 显示技能统计信息
     displaySkillsStatistics();
     
-    // 初始化雷达图占位符
-    const radarContainer = document.getElementById('radar-container');
-    radarContainer.innerHTML = '<div style="text-align: center; padding: 2rem;">' +
-                               '<h3 style="color: #00ffff; margin-bottom: 1rem;">📊 技能雷达图</h3>' +
-                               '<p style="color: #888;">展示65个技能的分类分布</p>' +
-                               '<p style="color: #666; font-size: 0.9rem; margin-top: 1rem;">' +
-                               '设计开发: 8项 | 内容创作: 9项 | 视频制作: 14项</p>' +
-                               '</div>';
-    
-    // 初始化时间线占位符
-    const timelineContainer = document.getElementById('timeline-container');
-    timelineContainer.innerHTML = '<div style="text-align: center; padding: 2rem;">' +
-                                  '<h3 style="color: #00ffff; margin-bottom: 1rem;">⏰ 学习时间线</h3>' +
-                                  '<p style="color: #888;">技能发展与学习历程</p>' +
-                                  '<div style="margin-top: 1rem; color: #00ff88;">' +
-                                  '<p>📅 2025-01: OpenClaw 精通</p>' +
-                                  '<p>📅 2026-03: 技能可视化系统</p>' +
-                                  '</div>' +
-                                  '</div>';
-    
     // 添加交互效果
     addInteractiveEffects();
 });
