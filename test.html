@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test ES6 Modules</title>
+</head>
+<body>
+    <script >
+        // Test if ES6 modules work
+        console.log('Testing ES6 modules...');
+        
+        try {
+            // Try to import the skills data
+            import { completeSkillsData } from './js/new-skills-data.js';
+            console.log('ES6 modules working!');
+            console.log('Skills data:', completeSkillsData.totalSkills, 'skills');
+        } catch (error) {
+            console.error('ES6 module error:', error);
+        }
+    </script>
+</body>
+</html>

@@ -1,5 +1,5 @@
 // 新UI管理器 - 控制完整的技能展示界面
-import { completeSkillsData } from './new-skills-data.js';
+
 
 class NewUIManager {
     constructor() {
@@ -495,4 +495,3 @@ document.addEventListener('DOMContentLoaded', function() {
     window.uiManager = new NewUIManager();
 });
 
-export { NewUIManager };

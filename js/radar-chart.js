@@ -187,4 +187,3 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // 导出供其他脚本使用
-export { radarChart };

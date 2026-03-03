@@ -152,4 +152,3 @@ document.addEventListener('DOMContentLoaded', async () => {
 });
 
 // 导出供其他脚本使用
-export { skillManager };

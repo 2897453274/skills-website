@@ -219,4 +219,3 @@ document.addEventListener('DOMContentLoaded', function() {
     skillsViewer.init();
 });
 
-export { skillsViewer };

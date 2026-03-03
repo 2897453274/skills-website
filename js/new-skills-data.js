@@ -649,5 +649,5 @@ const completeSkillsData = {
     }
 };
 
-// 导出数据
-export { completeSkillsData };
+// 全局变量
+window.completeSkillsData = completeSkillsData;

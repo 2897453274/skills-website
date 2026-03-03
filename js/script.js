@@ -1,5 +1,5 @@
 // 导入完整技能数据
-import { getSkillsData } from './skills-data.js';
+
 
 // 技能数据
 const skillsData = getSkillsData();

@@ -100,4 +100,3 @@ document.addEventListener('DOMContentLoaded', function() {
     timeline.initTimeline();
 });
 
-export { timeline };

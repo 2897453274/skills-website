@@ -76,7 +76,7 @@ class SkillsUpdater {
 const skillsUpdater = new SkillsUpdater();
 
 // 导出供其他脚本使用
-export { skillsUpdater };
+
 
 // 自动检查更新（页面加载时）
 document.addEventListener('DOMContentLoaded', async () => {
