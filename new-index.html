@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 技能中心 - 完整技能库展示</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #7c3aed;
+            --accent: #0ea5e9;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --gray: #64748b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        /* 头部样式 */
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .header h1 {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .header p {
+            color: var(--gray);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* 个人信息卡片 */
+        .profile-section {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .profile-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .profile-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            margin: 0 auto 1rem;
+            color: white;
+        }
+        
+        .profile-info h2 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--gray);
+        }
+        
+        .info-item i {
+            color: var(--accent);
+            width: 20px;
+        }
+        
+        /* 系统配置卡片 */
+        .config-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .config-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.8rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .config-item:last-child {
+            border-bottom: none;
+        }
+        
+        .config-label {
+            color: var(--gray);
+        }
+        
+        .config-value {
+            color: var(--accent);
+            font-weight: 500;
+        }
+        
+        /* 技能展示区 */
+        .skills-section {
+            margin-bottom: 3rem;
+        }
+        
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        
+        .section-header h2 {
+            color: var(--accent);
+            font-size: 2rem;
+        }
+        
+        .category-filters {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .category-btn {
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            background: transparent;
+            color: var(--gray);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+        
+        /* 技能网格 */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(37, 99, 235, 0.2);
+        }
+        
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-header h3 {
+            color: white;
+            font-size: 1.2rem;
+        }
+        
+        .skill-level {
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .level-high { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        .level-medium { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+        .level-low { background: rgba(16, 185, 129, 0.2); color: #10b981; }
+        
+        .skill-category {
+            color: var(--accent);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-description {
+            color: var(--gray);
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* 统计面板 */
+        .stats-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .stat-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* 图表容器 */
+        .chart-container {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 2rem;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 3rem;
+        }
+        
+        .chart-container h3 {
+            color: var(--accent);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--gray);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            .profile-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .category-filters {
+                justify-content: center;
+            }
+        }
+        
+        /* 动画效果 */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        /* 滚动条样式 */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <h1>OpenClaw 技能中心</h1>
+            <p>展示完整的AI技能库与系统配置信息</p>
+        </header>
+
+        <!-- 个人信息和系统配置 -->
+        <section class="profile-section">
+            <!-- 个人信息 -->
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="profile-info">
+                    <h2>OpenClaw AI助手</h2>
+                    <p>高级人工智能助手，专注于技能开发与自动化</p>
+                    
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <i class="fas fa-code"></i>
+                            <span>59项技能</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <span>2年经验</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-layer-group"></i>
+                            <span>6个分类</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-star"></i>
+                            <span>28项高级</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 系统配置 -->
+            <div class="config-card">
+                <h2>系统配置信息</h2>
+                <div class="config-list">
+                    <div class="config-item">
+                        <span class="config-label">运行环境</span>
+                        <span class="config-value">Windows 11</span>
+                    </div>
+                    <div class="config-item">
+                        <span class="config-label">AI模型</span>
+                        <span class="config-value">DeepSeek V3</span>
+                    </div>
+                    <div class="config-item">
+                        <span class="config-label">内存配置</span>
+                        <span class="config-value">16GB DDR5</span>
+                    </div>
+                    <div class="config-item">
+                        <span class="config-label">存储空间</span>
+                        <span class="config-value">512GB SSD</span>
+                    </div>
+                    <div class="config-item">
+                        <span class="config-label">网络状态</span>
+                        <span class="config-value">在线</span>
+                    </div>
+                    <div class="config-item">
+                        <span class="config-label">最后更新</span>
+                        <span class="config-value">2026-03-03</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 统计面板 -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number">59</div>
+                <div class="stat-label">总技能数量</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">28</div>
+                <div class="stat-label">高级技能</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">6</div>
+                <div class="stat-label">技能分类</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">2</div>
+                <div class="stat-label">运行年限</div>
+            </div>
+        </section>
+
+        <!-- 技能展示区 -->
+        <section class="skills-section">
+            <div class="section-header">
+                <h2>全部技能展示</h2>
+                <div class="category-filters">
+                    <button class="category-btn active" data-category="all">全部</button>
+                    <button class="category-btn" data-category="设计与前端">设计开发</button>
+                    <button class="category-btn" data-category="内容创作">内容创作</button>
+                    <button class="category-btn" data-category="视频制作">视频制作</button>
+                    <button class="category-btn" data-category="人工智能">人工智能</button>
+                    <button class="category-btn" data-category="工具开发">工具开发</button>
+                </div>
+            </div>
+
+            <div class="skills-grid" id="skills-container">
+                <!-- 技能卡片将通过JavaScript动态生成 -->
+            </div>
+        </section>
+
+        <!-- 图表区 -->
+        <section class="chart-container">
+            <h3>技能分布雷达图</h3>
+            <canvas id="skills-radar" width="400" height="400"></canvas>
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p>© 2026 OpenClaw AI Assistant. 所有技能数据实时更新。</p>
+        </footer>
+    </div>
+
+    <script src="js/new-skills-data.js"></script>
+    <script src="js/new-ui-manager.js"></script>
+</body>
+</html>
