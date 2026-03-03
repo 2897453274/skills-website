@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw 技能展示</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: #e2e8f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .header h1 {
+            background: linear-gradient(45deg, #00ffff, #ff00ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 3rem;
+        }
+        
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .skill-card {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .skill-card h3 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+        
+        .skill-description {
+            color: #cccccc;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 OpenClaw 技能中心</h1>
+            <p>59项技能完整展示 | 现代化界面设计</p>
+        </div>
+        
+        <div class="skill-grid">
+            <div class="skill-card">
+                <h3>前端设计与开发</h3>
+                <div class="skill-description">专业的网页前端开发，擅长响应式设计和用户体验优化</div>
+                <div>分类: 设计与前端 | 等级: 高级 | 经验: 2年</div>
+            </div>
+            
+            <div class="skill-card">
+                <h3>多平台内容发布</h3>
+                <div class="skill-description">在多个平台自动化发布内容，微信公众号、X/Twitter等</div>
+                <div>分类: 内容创作 | 等级: 高级 | 经验: 2年</div>
+            </div>
+            
+            <div class="skill-card">
+                <h3>智能内容系统</h3>
+                <div class="skill-description">智能化的内容创作和管理系统，自动化内容生产与发布</div>
+                <div>分类: 人工智能 | 等级: 高级 | 经验: 2年</div>
+            </div>
+            
+            <div class="skill-card">
+                <h3>无限对话视频</h3>
+                <div class="skill-description">生成无限长度的对话视频，支持唇形同步技术</div>
+                <div>分类: 视频制作 | 等级: 高级 | 经验: 2年</div>
+            </div>
+            
+            <div class="skill-card">
+                <h3>浏览器自动化</h3>
+                <div class="skill-description">Chrome浏览器自动化操作，网页操作和数据提取</div>
+                <div>分类: 工具开发 | 等级: 高级 | 经验: 2年</div>
+            </div>
+            
+            <div class="skill-card">
+                <h3>QQ机器人技能</h3>
+                <div class="skill-description">QQ聊天机器人开发，定时提醒，媒体发送功能</div>
+                <div>分类: 即时通讯 | 等级: 中级 | 经验: 1年</div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 3rem; text-align: center; color: #888;">
+            <p>总技能数: 59项 | 最后更新: 2026-03-03</p>
+            <p>🌐 访问地址: https://2897453274.github.io/skills-website/</p>
+        </div>
+    </div>
+
+    <script>
+        // 简单的技能数据展示
+        console.log('OpenClaw技能中心已加载');
+        
+        // 这里可以添加更多的交互功能
+        document.querySelectorAll('.skill-card').forEach(card => {
+            card.addEventListener('click', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 30px rgba(0, 255, 255, 0.2)';
+                this.style.borderColor = '#00ffff';
+                
+                setTimeout(() => {
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                    this.style.borderColor = 'rgba(255, 255, 255, 0.1)';
+                }, 1000);
+            });
+        });
+    </script>
+</body>
+</html>
